@@ -1,4 +1,4 @@
-package com.pack.cryptomvvm.di
+package com.pack.cryptomvvm.di.module
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
