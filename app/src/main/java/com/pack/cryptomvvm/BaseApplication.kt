@@ -13,11 +13,7 @@ class BaseApplication:Application() {
     override fun onCreate() {
         super.onCreate()
 
-        component=DaggerSharedComponent.builder().sharedModule(
-            SharedModule(
-                this
-            )
-        ).build()
+        component=DaggerSharedComponent.builder().sharedModule(SharedModule(this)).build()
     }
 
 
