@@ -4,6 +4,7 @@ import android.app.Application
 import com.pack.cryptomvvm.MainActivity
 import com.pack.cryptomvvm.di.module.NetworkModule
 import com.pack.cryptomvvm.di.module.SharedModule
+import com.pack.cryptomvvm.ui.fragment.Account
 import com.pack.cryptomvvm.ui.fragment.Home
 import dagger.Component
 import javax.inject.Singleton
@@ -16,6 +17,7 @@ interface SharedComponent {
     fun inject(application: Application)
     fun inject(activity:MainActivity)
     fun inject(fragment:Home)
+    fun inject(accFragment:Account)
 
 
 }
