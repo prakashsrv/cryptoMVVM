@@ -1,4 +1,4 @@
-package com.pack.cryptomvvm.ViewModels
+package com.pack.cryptomvvm.viewmodels
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -8,7 +8,6 @@ import com.pack.cryptomvvm.Repository.BalanceRepository
 import com.pack.cryptomvvm.model.Balance
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -28,8 +27,7 @@ class HomeViewModels @Inject constructor(private val balanceRepository: BalanceR
 
     private fun loadData(api: String){
 
-        disposable.add(
-            balanceRepository.getBalance_Repo(api).subscribeOn(Schedulers.io())
+        disposable.add(balanceRepository.getBalance_Repo(api).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({ data ->
                     getBalanceMutableLiveData(api).value = data
                     isLoading.value=false
