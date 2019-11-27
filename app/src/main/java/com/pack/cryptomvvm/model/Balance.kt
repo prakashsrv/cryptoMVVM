@@ -1,8 +1,8 @@
 package com.pack.cryptomvvm.model
 
 data class Balance(
-    val status: String,
-    val data: Data
+    val status: String?,
+    val data: Data?
 )
 
 data class Data(
